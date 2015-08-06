@@ -1,2 +1,2 @@
 # AndrewPastushenko.github.io
-<h3>Homeword area!</h3>
+<h3>Homework area!</h3>
