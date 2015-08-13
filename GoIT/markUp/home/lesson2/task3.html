@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+    <form action="/echo" enctype="multipart/form-data" method="post">
+        <label for="name">
+            Name<br />
+            <input type="text" name="login" id="name" value="Name"/>
+        </label>
+        <br />
+        <br />
+        <label for="email">
+            Email<br />
+            <input type="text" name="email" id="email" value="Email"/>
+        </label>
+        <br />
+        <br />
+        Sex<br />
+        <input type="radio" id="male" name="sex" value="M" checked="checked"/><label for="male"> Male</label>
+        <input type="radio" id="female" name="sex" value="F"/><label for="female"> Female</label>
+        <br />
+        <br />
+        Current status<br />
+        <input type="checkbox" id="student" name="student" value="Student"/><label for="student">Student</label><br />
+        <input type="checkbox" id="employed" name="employed" value="Employed"/><label for="employed">Employed</label><br />
+        <input type="checkbox" id="unemployed" name="unemployed" value="Unemployed"/><label for="unemployed">Unemployed</label><br />
+        <br />
+        Month and Year of birth<br />
+        <select name="month" id="month">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">December</option>
+        </select>
+        <select name="year" id="year">
+            <option value="2000" label="2000"></option>
+            <option value="2001" selected="selected">2001</option>
+            <option value="2002" label="2002"></option>
+        </select>
+        <br />
+        <br />
+        <label for="skills">SKills and technologies<br />
+        <select name="skills[]" id="skills" size="10" multiple="multiple">
+            <optgroup label="Tech skills">
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">Javascript</option>
+                <option value="4">Git</option>
+            </optgroup>
+            <optgroup label="Soft skills">
+                <option value="5">Time management</option>
+                <option value="6">Proactive</option>
+                <option value="7">Teamwork</option>
+                <option value="8">Leadership</option>
+            </optgroup>
+        </select>
+        </label>
+        <br />
+        <br />
+        <label for="file">Photo<br />
+            <input type="file" name="file" id="file"/>
+        </label>
+        <br />
+        <br />
+        <label for="comments">Comments<br />
+            <textarea name="comments" id="comments" cols="30" rows="3"></textarea>
+        </label>
+        <br />
+        <br />
+        <input type="submit" value="Save"/>
+    </form>
+</body>
+</html>
