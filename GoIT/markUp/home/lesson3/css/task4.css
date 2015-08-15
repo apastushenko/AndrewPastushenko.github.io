@@ -6,8 +6,26 @@ a[href*="google"]{
     color: #666;
 }
 
-a[target="_blank"]:after{
-    content: "\21f1";
-    display: inline-block;
-    transform: scaleX(-1);
+/*a[target="_blank"]:after{*/
+    /*/!*content: " \2197";*!/*/
+    /*content: "  \279A";*/
+    /*/!*content: "  \2B77";*!/*/
+    /*display: inline-block;*/
+    /*/!*transform: scaleY(-1);*!/*/
+/*}*/
+
+/*a[target="_blank"]:visited:after{*/
+    /*transform: scaleY(-1);*/
+/*}*/
+
+a[target="_blank"]:link:after{
+     content: "  \279A";
+     display: inline-block;
 }
+
+a[target="_blank"]:visited:after{
+    content: "  \279A";
+    display: inline-block;
+    transform: scaleY(-1);
+}
+
