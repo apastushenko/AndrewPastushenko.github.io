@@ -1,0 +1,50 @@
+body{
+    font-family:sans-serif;
+    font-size: 12px;
+    color: #a23bd2;
+    margin: 0;
+}
+
+.paginator{
+    display: inline-block;
+    background-color: #ecf0f1;
+    padding: 15px 0;
+}
+
+.paginator a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 18px;
+    color: #C25EDA;
+    font-weight: bold;
+    /*background-color: #a0a0a0;*/
+}
+
+.paginator a.nextprev{
+    padding: 0 10px;
+}
+
+.paginator a.pagenum {
+    border: 1px solid #C25EDA;
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-left: 3px;
+}
+
+#selected, .pagenum:hover {
+    border: 1px solid #7C12BC;
+    color: #fff;
+    background: #C25EDA;
+}
+
+.paginator a span{
+    padding: 0 3px;
+    font-size: 15px;
+    vertical-align: baseline;
+}
+
+span.dots{
+    vertical-align: bottom;
+    margin-left: 6px;
+    margin-right: 3px;
+}
