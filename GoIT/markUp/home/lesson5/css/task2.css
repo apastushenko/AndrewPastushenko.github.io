@@ -94,9 +94,9 @@ ul li span {
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: #b3560b 0px 4px;
     margin-bottom: 28px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .shadow {
@@ -104,5 +104,6 @@ ul li span {
 }
 
 input:hover{
+    box-shadow: 0 3px 3px 3px rgb(179,86,11);
     color: #c6c6c6;
 }
