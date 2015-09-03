@@ -82,6 +82,10 @@
 .banner_button button:hover{
     box-shadow: inset 0px 0px 50px 5px #97a8b4;
 }
+
+.banner_button button:focus{
+    outline: none;
+}
 /*Banner End*/
 
 /*Price Begin*/
@@ -190,6 +194,10 @@
     box-shadow: inset 0px 0px 10px 5px #97a8b4;
 }
 
+.pricing_button-lr button:focus {
+    outline: none;
+}
+
 /* Center */
 .pricing_center {
     position: relative;
@@ -229,7 +237,11 @@
     cursor: pointer;
 }
 .pricing_button-center button:hover {
-    box-shadow: inset 0px 0px 10px 2px #fff;
+     box-shadow: inset 0px 0px 10px 2px #fff;
+}
+
+.pricing_button-center button:focus {
+    outline: none;
 }
 
 /* Right */
