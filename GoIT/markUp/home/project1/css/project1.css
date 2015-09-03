@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Header begin*/
+.header {
+    background-color: #fff;
+    font: 600 14px 'Open Sans', sans-serif;
+}
+.header_center {
+    max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header_logo{
+    float: left;
+    margin-top: 42px;
+}
+.header_menu{
+    list-style: none;
+    text-transform: uppercase;
+    padding-top: 58px;
+    padding-bottom: 38px;
+    float: right;
+}
+.header_menu li{
+    display: inline-block;
+    padding-left: 5px;
+}
+.header_menu li a{
+    text-decoration: none;
+    color: #989898;
+    padding: 0 15px 32px;
+}
+.header_menu li:hover a{
+    color: #3070a8;
+}
+.header_menu li:hover a{
+    color: #3070a8;
+    border-bottom: 6px solid #3070a8;
+}
+/*Header end*/
+
+/*Banner Begin*/
+.banner {
+    background: url("../images/banner_bg.jpg") 50% 50%  no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 140px;
+}
+.banner_title{
+    font: bold 48px 'Open Sans', serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+.banner_title span{
+    font-size: 34px;
+    font-weight: normal;
+    text-transform: none;
+}
+.banner_text{
+    color: #fff;
+    font: italic 20px 'Calibri';
+    line-height: 1.5;
+    padding-top: 15px;
+}
+.banner_button{
+    padding-top: 45px;
+    padding-bottom: 108px;
+}
+.banner_button button{
+    text-transform: uppercase;
+    font: bold 16px 'Open Sans', sans-serif;
+    color: #fff;
+    background: none;
+    border: 1px solid #97a8b4;
+    width: 248px;
+    height: 59px;
+    cursor: pointer;
+}
+.banner_button button:hover{
+    box-shadow: inset 0px 0px 50px 5px #97a8b4;
+}
+/*Banner End*/
+
+/*Price Begin*/
+.pricing {
+    background-color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.pricing_tittle {
+    font-size: 30px;
+    color: #41525c;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding-top: 75px;
+}
+
+/* Left */
+.pricing_left {
+    position: relative;
+    display: inline-block;
+    width: 290px;
+    border: 1px solid #e8eaec;
+    border-radius: 5px;
+    left: 7px;
+    z-index: 1;
+}
+.pricing_tittle-left {
+    background-color: #37c2d3;
+    border-radius: 5px 0 0 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 17px 0;
+    margin: 0;
+}
+.pricing_iconic {
+    font-weight: normal;
+    font-size: 24px;
+    color: #3f4042;
+    text-transform: uppercase;
+    margin: 23px 0 0;
+}
+.pricing_price {
+    font-weight: bold;
+    font-size: 72px;
+    color: #35495a;
+    margin: 15px 0 0;
+}
+.pricing_price sup {
+    font-size: 26px;
+    color: #35495a;
+    position: relative;
+    bottom: 12px;
+}
+.pricing_price sub {
+    font-weight: normal;
+    font-size: 18px;
+    color: #35495a;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+.pricing_list ul {
+    display: table;
+    list-style: none;
+    font-size: 15px;
+    color: #888c94;
+    padding: 0;
+    text-align: left;
+    margin: 18px auto;
+}
+.pricing_list-left li {
+    padding: 0 51px;
+    line-height: 2;
+}
+.pricing_list ul li:nth-child(odd) {
+    background: #edf5fd;
+}
+.pricing_list ul li:nth-child(even) {
+    background-color: #f5f5f6;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.pricing_list ul li>img {
+    position: relative;
+    top: 3px;
+    right: 12px;
+}
+.pricing_button-lr button{
+    position: relative;
+    background-color: #3371a6;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 68px;
+    border-radius: 5px;
+    box-shadow: -1px 0 1px #a5bccf, 0 3px 1px #16436a;
+    margin-bottom: 23px;
+    cursor: pointer;
+}
+.pricing_button-lr button:hover {
+    box-shadow: inset 0px 0px 10px 5px #97a8b4;
+}
+
+/* Center */
+.pricing_center {
+    position: relative;
+    display: inline-block;
+    width: 288px;
+    border: 4px solid #ee8129;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 2px #cbe2ef;
+    z-index: 2;
+}
+.pricing_tittle-center {
+    background-color: #ee8129;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 22px 0;
+    margin: 0;
+    text-align: center;
+}
+.pricing_list-center li {
+    padding: 0 48px;
+    line-height: 2;
+}
+.pricing_button-center button {
+    position: relative;
+    background-color: #ee8129;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 68px;
+    border-radius: 5px;
+    box-shadow: -1px 0 1px #edc3a1, 0 3px 1px #b3560b;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+.pricing_button-center button:hover {
+    box-shadow: inset 0px 0px 10px 2px #fff;
+}
+
+/* Right */
+.pricing_right {
+    position: relative;
+    display: inline-block;
+    width: 287px;
+    border: 1px solid #e8eaec;
+    border-radius: 5px;
+    right: 7px;
+    z-index: 1;
+}
+.pricing_tittle-right {
+    background-color: #1cb79a;
+    border-radius: 0 5px 0 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 17px 0 16px 0;
+    margin: 0;
+}
+.pricing_list-right li {
+    padding: 0 42px;
+    line-height: 2;
+}
+/*Price End*/
+
+/*Testimonials Begin*/
+.testimonials{
+    background: url("../images/testimonials_bg.png") 50% 50% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.testimonials_tittle{
+    font: normal 40px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #3170A8;
+    padding: 40px 0;
+    letter-spacing: 0.1em;
+}
+.testimonials_tittle span{
+    color: #EE8129;
+}
+.testimonials_review{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 80px;
+}
+.testimonials_review:nth-of-type(2n){
+    margin-left: 40px;
+}
+.review_photo {
+    display: inline-block;
+    float: left;
+}
+.review_block{
+    display: inline-block;
+    margin-left: 26px;
+    position: relative;
+    background: #f7f7f7;
+    width: 330px;
+    padding: 0 15px;
+    border: 1px solid #e0e0e0;
+
+}
+.review_block:before {
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent #f7f7f7 transparent transparent;
+    top: 35px;
+    right: 100%;
+}
+.review_header {
+    border-bottom: 1px dotted #666666;
+    overflow: hidden;
+    font-size: 13px;
+    font-style: italic;
+    padding: 12px 0 9px 0;
+}
+.review_name {
+    float: left;
+    text-decoration: none;
+    color: #3070a8;
+}
+.review_name:before {
+    content: "- ";
+}
+.review_customer{
+    margin-right: 5px;
+    float: right;
+    text-decoration: none;
+    color: #3070a8;
+}
+.review_text{
+    font-size: 13px;
+    color: #666;
+    text-align: left;
+    line-height: 1.6;
+    word-spacing: 0.2em;
+    padding: 9px 0;
+}
+/*Testimonials End*/
