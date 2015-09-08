@@ -6,6 +6,7 @@
 .positioner{
     width: 1023px;
     margin: 0 auto;
+    /*border: 1px solid blue;*/
 }
 
 /*Header begin*/
@@ -89,6 +90,85 @@
 }
 /*Banner End*/
 
+/*Serveices Begin*/
+.services{
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.services_tittle{
+    font: bold 30px 'Trebuchet MS', sans-serif;
+    color: #41525c;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+}
+.services_protect {
+    display: inline-block;
+    width: 280px;
+    margin-right: 86px;
+}
+.services_alert {
+    display: inline-block;
+    width: 280px;
+    margin-right: 86px;
+}
+.services_detect {
+    display: inline-block;
+    width: 280px;
+}
+.services_name {
+    font: normal 30px 'Futura Book';
+    color: #3070a8;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+.services_text {
+    font: 400 14px 'Opan Sans', sans-serif;
+    color: #999;
+    margin-bottom: 70px;
+}
+/*Serveices End*/
+
+/*msection Begin*/
+.msection{
+    background: url("../images/text_section_bg.jpg")  no-repeat;
+    background-size: cover;
+}
+.msection_tittle1 {
+    font: normal 26px 'Futura Book';
+    color: #ee8129;
+    text-transform: uppercase;
+    line-height: 1.8;
+    padding-top: 85px;
+}
+
+.msection_tittle2 {
+    font: italic 19px 'Opan Sans', sans-serif;
+    color: #fff;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.msection_list {
+    margin-left: 30px;
+    padding-bottom: 80px;
+}
+
+.msection_list_grey {
+    font: 400 14px 'Opan Sans', sans-serif;
+    color: #9d9d9d;
+    line-height: 2;
+}
+
+.msection_list_blue {
+    font: 400 14px 'Opan Sans', sans-serif;
+    color: #3070a8;
+    line-height: 2;
+    margin: 10px 0;
+}
+/*msection End*/
+
 /*Price Begin*/
 .pricing {
     background-color: #fff;
@@ -163,6 +243,7 @@
 .pricing_list-left li {
     padding: 0 51px;
     line-height: 2;
+    white-space: nowrap;
 }
 .pricing_list ul li:nth-child(odd) {
     background: #edf5fd;
@@ -218,6 +299,7 @@
 .pricing_list-center li {
     padding: 0 48px;
     line-height: 2;
+    white-space: nowrap;
 }
 .pricing_button-center button {
     position: relative;
@@ -260,6 +342,7 @@
 .pricing_list-right li {
     padding: 0 42px;
     line-height: 2;
+    white-space: nowrap;
 }
 /*Price End*/
 
