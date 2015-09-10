@@ -422,3 +422,75 @@
     padding: 9px 0;
 }
 /*Testimonials End*/
+
+/*Contact begin*/
+.contact{
+    position: relative;
+}
+.footer_address{
+    height: 345px;
+}
+.address_list{
+    display: table;
+    list-style: none;
+    font: 600 14px 'Open Sans', sans-serif;
+    color: #666;
+    padding-left: 55px;
+    padding-top: 40px;
+    line-height: 2.2;
+    position: relative;
+}
+.address_list li img {
+    position: absolute;
+    left: 2px;
+}
+.address_list li:nth-child(5) {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.address_list li:last-child a {
+    text-decoration: none;
+    color: inherit;
+}
+.address_list li:last-child a:hover {
+    color: #3070a8;
+}
+.address_list li:last-child img {
+    margin-top: 10px;
+    left: 0;
+}
+.social-link {
+    margin-top: 25px;
+    padding-left: 2px;
+}
+.social-link img {
+    margin-right: 20px;
+}
+.footer_map {
+    width: 50%;
+    height: 345px;
+    background: url("../images/map.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*Contact end*/
+
+/*Footer begin*/
+.footer {
+    background-color: #3070a8;
+    font: 400 14px 'Open Sans', sans-serif;
+    text-align: center;
+    color: #fff;
+    line-height: 2;
+    padding: 20px 0 30px;
+}
+.footer_line-a span {
+    font-weight: 600;
+}
+.footer_line-b span {
+    color: #1d1c1c;
+    font-weight: 700;
+}
+/*Footer end*/
