@@ -142,30 +142,24 @@
     line-height: 1.8;
     padding-top: 85px;
 }
-
 .msection_tittle2 {
     font: italic 19px 'Opan Sans', sans-serif;
     color: #fff;
     line-height: 2;
     margin-bottom: 30px;
 }
-
 .msection_list {
     margin-left: 30px;
     padding-bottom: 80px;
 }
-
 .msection_list_grey {
     font: 400 14px 'Opan Sans', sans-serif;
     color: #9d9d9d;
     line-height: 2;
+    margin-bottom: 10px;
 }
-
-.msection_list_blue {
-    font: 400 14px 'Opan Sans', sans-serif;
+.msection_list_grey:hover{
     color: #3070a8;
-    line-height: 2;
-    margin: 10px 0;
 }
 /*msection End*/
 
