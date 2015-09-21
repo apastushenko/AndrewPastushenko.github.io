@@ -5,6 +5,7 @@
     <title>Project 2</title>
     <link rel="stylesheet" href="./style/style.css"/>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <div class="gallery">
@@ -14,151 +15,72 @@
         <div class="gallery_item">
             <img src="./images/img_1s.png" alt="picture1" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img1" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_1l.jpg"/>
+                <img id="zoom_img1" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
         <div class="gallery_item">
             <img src="./images/img_2s.png" alt="picture2" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img2" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_2l.jpg"/>
+                <img id="zoom_img2" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
         <div class="gallery_item">
             <img src="./images/img_3s.png" alt="picture3" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img3" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_3l.jpg"/>
+                <img id="zoom_img3" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
         <div class="gallery_item">
             <img src="./images/img_4s.png" alt="picture4" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img4" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_4l.jpg"/>
+                <img id="zoom_img4" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
         <div class="gallery_item">
             <img src="./images/img_5s.png" alt="picture5" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img5" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_5l.jpg"/>
+                <img id="zoom_img5" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
         <div class="gallery_item">
             <img src="./images/img_6s.png" alt="picture6" class="gallery_item_image"/>
             <div class="gallery_item_icons">
-                <img id="zoom_img6" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom" data-url="./images/img_6l.jpg"/>
+                <img id="zoom_img6" src="./images/zoom.png" alt="zoom" class="gallery_item_icons_zoom"/>
                 <img src="./images/link.png" alt="link" class="gallery_item_icons_link"/>
             </div>
         </div>
     </div>
 
     <div class="overlay"></div>
-    <div class="popup">
-        <img id="zoom_img" class="popup_img" src="./images/img_1l.jpg" alt="bike">
+    <div class="popup_img popup_img1_large">
+        <img class="popup_img_large" src="./images/img_1l.jpg" alt="picture1">
+        <a href="#" class="close_btn"></a>
+    </div>
+    <div class="popup_img popup_img2_large">
+        <img class="popup_img_large" src="./images/img_2l.jpg" alt="picture2">
+        <a href="#" class="close_btn"></a>
+    </div>
+    <div class="popup_img popup_img3_large">
+        <img class="popup_img_large" src="./images/img_3l.jpg" alt="picture3">
+        <a href="#" class="close_btn"></a>
+    </div>
+    <div class="popup_img popup_img4_large">
+        <img class="popup_img_large" src="./images/img_4l.jpg" alt="picture3">
+        <a href="#" class="close_btn"></a>
+    </div>
+    <div class="popup_img popup_img5_large">
+        <img class="popup_img_large" src="./images/img_5l.jpg" alt="picture3">
+        <a href="#" class="close_btn"></a>
+    </div>
+    <div class="popup_img popup_img6_large">
+        <img class="popup_img_large" src="./images/img_6l.jpg" alt="picture3">
         <a href="#" class="close_btn"></a>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            "use strict";
-            $('.close_btn').click(function (e) {
-
-                $('.overlay').hide();
-                $('.popup').hide();
-            });
-            $('#zoom_img6').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img6').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-
-            $('#zoom_img5').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img5').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-
-            $('#zoom_img4').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img4').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-
-            $('#zoom_img3').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img3').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-
-            $('#zoom_img2').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img2').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-
-            $('#zoom_img1').click(function (e) {
-                e.preventDefault();
-
-                var url = $('#zoom_img1').attr('data-url');
-//                console.log(url);
-
-                $('#zoom_img').attr('src', url)
-
-                var src = $('#zoom_img').attr('src');
-//                console.log(src);
-
-                $('.overlay').show();
-                $('.popup').show();
-            });
-        });
-    </script>
 </body>
 </html>
