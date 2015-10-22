@@ -14,3 +14,7 @@ people.sort(function compare(a,b){
 });
 
 console.log(people[0].age);
+
+people.forEach(function(item){
+    console.log(item.name);
+});

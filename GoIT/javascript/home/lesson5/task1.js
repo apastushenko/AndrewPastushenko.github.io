@@ -10,10 +10,14 @@ var tasksCompleted = {
 
 function seachMaxTasks(obj){
     var maxTasks = 0;
+    var name = '';
     for(var key in obj){
-        if (obj[key] > maxTasks) maxTasks = obj[key];
+        if (obj[key] > maxTasks){
+            maxTasks = obj[key];
+            name = key;
+        }
     }
-    return maxTasks
+    return name;
 }
 
 console.log(seachMaxTasks(tasksCompleted));

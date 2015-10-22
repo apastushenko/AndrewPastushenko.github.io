@@ -10,12 +10,9 @@ var image = {
 function multiplyNumeric(obj){
     var clone = {};
     for(var key in obj){
-        if(isNaN(+obj[key])){
-        //if(!+obj[key]){
-            clone[key] = obj[key];
-        } else {
-            clone[key] = obj[key] * 2;
-        }
+        //if(isNaN(+obj[key])){
+        if(!+obj[key]) clone[key] = obj[key];
+        else clone[key] = obj[key] * 2;
     }
     return clone;
 }
@@ -23,5 +20,5 @@ function multiplyNumeric(obj){
 var newImage = multiplyNumeric(image);
 console.log(newImage);
 
-console.log(!NaN);
+//console.log(!NaN);
 
