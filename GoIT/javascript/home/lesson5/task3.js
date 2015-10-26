@@ -1,14 +1,14 @@
 /**
  * Created by user on 15.10.2015.
  */
-function calculateNumbers(){
+function getSum () {
     arrNum = [];
-    while(true){
-        var num = prompt('Enter number: ', '');
-        if(!+num || +num === 0) arrNum.push(num);
-        else break;
-
-        sum += +num;
+    while (true){
+        var number = prompt('Enter number: ', '');
+        if (number === '' || typeof(number) === 'object' || isNaN(number)) {
+            break;
+        }
+        arrNum.push(number);
     }
 
     var sum = 0;
@@ -18,4 +18,4 @@ function calculateNumbers(){
     return sum;
 }
 
-console.log(calculateNumbers());
+console.log(getSum());
