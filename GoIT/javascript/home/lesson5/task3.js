@@ -8,7 +8,7 @@ function getSum () {
         if (number === '' || typeof(number) === 'object' || isNaN(number)) {
             break;
         }
-        arrNum.push(number);
+        arrNum.push(+number);
     }
 
     var sum = 0;
