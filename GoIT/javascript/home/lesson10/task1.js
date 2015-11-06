@@ -8,14 +8,14 @@ var obj = {
     person1Name: 'Ivanov',
     person2Age: 30,
     person2Name: 'Petrov',
-    person3Age: 40,
+    person3Age: 0,
     person3Name: 'Sidorov'
 };
 
 function extractNumber(obj){
     var arrRes = [];
     for(key in obj){
-        if (Number(obj[key])) arrRes.push(obj[key])
+        if (!isNaN(parseFloat(obj[key])) && isFinite(obj[key])) arrRes.push(obj[key]);
     }
     return arrRes;
 };
@@ -23,7 +23,7 @@ function extractNumber(obj){
 function extractString(obj){
     var arrRes = [];
     for(key in obj){
-        if (isNaN(obj[key])) arrRes.push(obj[key])
+        if (isNaN(obj[key])) arrRes.push(obj[key]);
     }
     return arrRes;
 };
