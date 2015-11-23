@@ -19,12 +19,12 @@ function CoffeeMachine(power, capacity) {
         return waterAmount;
     };
 
-    this.setPower = function(power){
-        if (power < 0) {
-            throw new Error("Значение должно быть положительным");
-        }
-        power = power;
-    };
+    //this.setPower = function(power){
+    //    if (power < 0) {
+    //        throw new Error("Значение должно быть положительным");
+    //    }
+    //    power = power;
+    //};
 
     this.getPower = function(){
         return power;
