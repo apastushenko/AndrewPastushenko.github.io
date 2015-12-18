@@ -12,6 +12,7 @@ $(function() {
         this.todoList = $('.table__body');
         this.btnAdd = $('.btn-primary');
 
+
         this.init();
     };
 
@@ -106,6 +107,7 @@ $(function() {
 
     };
 
+
     // Инициализация
     ToDo.prototype.init = function () {
         var __self = this;
@@ -128,7 +130,7 @@ $(function() {
                 direction = 'up';
             }
 
-            if( ((index != 0) && (direction = 'up')) ||  ((index != this.getLength()) && (direction = 'down'))) {
+            if( ((index != 0) && (direction == 'up')) ||  ((index != __self.model.length - 1) && (direction == 'down'))) {
                 __self.upDownItem(index, direction);
             }
         });
@@ -138,7 +140,22 @@ $(function() {
         });
 
 
+        var inputField = document.body.querySelector('.task-form__text');
+        var btn = document.body.querySelector('.btn-primary');
+
+        inputField.addEventListener('input', blockBtn);
+
+        function blockBtn () {
+
+            if (!inputField.value) {
+                btn.disabled = true;
+            } else {
+                btn.disabled = false;
+            }
+
+        }
     };
+
 
     window.todo = new ToDo();
 });
