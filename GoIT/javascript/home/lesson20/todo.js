@@ -107,7 +107,6 @@ $(function() {
 
     };
 
-
     // Инициализация
     ToDo.prototype.init = function () {
         var __self = this;
@@ -139,21 +138,15 @@ $(function() {
             __self.onFormSubmit(e);
         });
 
+        //Disable addButton когда в inputField пусто
+        $( '.task-form__text' ).on( "input", function(e) {
+           if (!e.target.value) {
+               $('.btn-primary').attr( 'disabled', true);
+           } else {
+               $('.btn-primary').attr( 'disabled', false);
+           }
+        });
 
-        var inputField = document.body.querySelector('.task-form__text');
-        var btn = document.body.querySelector('.btn-primary');
-
-        inputField.addEventListener('input', blockBtn);
-
-        function blockBtn () {
-
-            if (!inputField.value) {
-                btn.disabled = true;
-            } else {
-                btn.disabled = false;
-            }
-
-        }
     };
 
 
