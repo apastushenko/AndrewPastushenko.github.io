@@ -17,13 +17,15 @@
             coins: document.querySelector('.bag-coins')
         };
 
-        this.sfxDeath = new Audio('styles/sounds/death.m4a');
-        this.sfxFire = new Audio('styles/sounds/fire.m4a');
-        this.sfxFault = new Audio('styles/sounds/foul.m4a');
-        this.sfxIntro = new Audio('styles/sounds/intro.m4a');
-        this.sfxShot = new Audio('styles/sounds/shot.m4a');
-        this.sfxWait = new Audio('styles/sounds/wait.m4a');
-        this.sfxWin = new Audio('styles/sounds/win.m4a');
+        this.soundsForGame = {
+            death: new Audio('styles/sounds/death.m4a'),
+            fire: new Audio('styles/sounds/fire.m4a'),
+            fault: new Audio('styles/sounds/foul.m4a'),
+            intro: new Audio('styles/sounds/intro.m4a'),
+            shot: new Audio('styles/sounds/shot.m4a'),
+            wait: new Audio('styles/sounds/wait.m4a'),
+            win: new Audio('styles/sounds/win.m4a')
+        };
 
         this.init = function () {
             __self.domElems.btnMenuStart.addEventListener('click', __self.newGame);
@@ -68,7 +70,7 @@
             }
             setTimeout(function(){
                 __self.startMove();
-                __self.sfxIntro.play();
+                __self.soundsForGame.intro.play();
             }, 50);
         };
 
@@ -81,10 +83,10 @@
         };
 
         this.startFight = function () {
-            __self.sfxIntro.pause();
-            __self.sfxIntro.currentTime = 0;
+            __self.soundsForGame.intro.pause();
+            __self.soundsForGame.intro.currentTime = 0;
             __self.enemyStay();
-            __self.sfxWait.play();
+            __self.soundsForGame.wait.play();
             setTimeout(function () {
                 if (!__self.fault) {
                     console.log('FIRE! canFire!');
@@ -92,7 +94,7 @@
                     __self.domElems.status.classList.add('game_status-show');
                     __self.canFire = true;
                     __self.enemyReady();
-                    __self.sfxFire.play();
+                    __self.soundsForGame.fire.play();
                     var time = __self.shootTime - (__self.level * 300);
                     setTimeout(__self.gunmanHit, time);
                 }
@@ -104,10 +106,10 @@
             if (__self.canFire) {
                 __self.domElems.bandito.removeEventListener('mousedown', __self.playerHit);
                 __self.canFire = false;
-                __self.sfxShot.play();
+                __self.soundsForGame.shot.play();
                 __self.enemyHit();
                 __self.domElems.status.textContent = 'Gunman won!';
-                __self.sfxDeath.play();
+                __self.soundsForGame.death.play();
                 setTimeout(__self.gameOver, 6000);
             }
         };
@@ -160,7 +162,7 @@
 
             if (__self.canFire) {
                 __self.canFire = false;
-                __self.sfxShot.play();
+                __self.soundsForGame.shot.play();
                 __self.enemyDown();
                 setTimeout(__self.enemyDead, 1500);
                 __self.domElems.status.textContent = 'You won!';
@@ -170,7 +172,7 @@
                 __self.domElems.coins.classList.add('bag-coins_level' + __self.level);
 
                 setTimeout(function() {
-                    __self.sfxWin.play();
+                    __self.soundsForGame.win.play();
                 }, 1000);
 
                 setTimeout(function () {
@@ -184,15 +186,15 @@
             } else {
                 __self.fault = true;
                 __self.domElems.bandito.removeEventListener('transitionend', __self.startFight);
-                __self.sfxIntro.pause();
-                __self.sfxIntro.currentTime = 0;
-                __self.sfxShot.play();
+                __self.soundsForGame.intro.pause();
+                __self.soundsForGame.intro.currentTime = 0;
+                __self.soundsForGame.shot.play();
                 __self.domElems.bandito.classList.remove('enemy_move');
                 __self.clearAnimation();
                 __self.domElems.status.textContent = 'Fault!';
                 __self.domElems.status.classList.add('game_status-show');
                 setTimeout(function() {
-                    __self.sfxFault.play();
+                    __self.soundsForGame.fault.play();
                 }, 1000);
                 setTimeout(__self.gameOver, 4000);
             }
