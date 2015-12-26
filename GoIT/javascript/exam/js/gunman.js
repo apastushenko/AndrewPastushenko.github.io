@@ -17,6 +17,14 @@
             coins: document.querySelector('.bag-coins')
         };
 
+        this.sfxDeath = new Audio('styles/sounds/death.m4a');
+        this.sfxFire = new Audio('styles/sounds/fire.m4a');
+        this.sfxFault = new Audio('styles/sounds/foul.m4a');
+        this.sfxIntro = new Audio('styles/sounds/intro.m4a');
+        this.sfxShot = new Audio('styles/sounds/shot.m4a');
+        this.sfxWait = new Audio('styles/sounds/wait.m4a');
+        this.sfxWin = new Audio('styles/sounds/win.m4a');
+
         this.init = function () {
             __self.domElems.btnMenuStart.addEventListener('click', __self.newGame);
 
@@ -60,7 +68,8 @@
             }
             setTimeout(function(){
                 __self.startMove();
-            }, 500);
+                __self.sfxIntro.play();
+            }, 50);
         };
 
         this.startMove = function () {
@@ -72,8 +81,10 @@
         };
 
         this.startFight = function () {
+            __self.sfxIntro.pause();
+            __self.sfxIntro.currentTime = 0;
             __self.enemyStay();
-
+            __self.sfxWait.play();
             setTimeout(function () {
                 if (!__self.fault) {
                     console.log('FIRE! canFire!');
@@ -81,8 +92,8 @@
                     __self.domElems.status.classList.add('game_status-show');
                     __self.canFire = true;
                     __self.enemyReady();
-
-                    var time = __self.shootTime - (__self.level * 200);
+                    __self.sfxFire.play();
+                    var time = __self.shootTime - (__self.level * 300);
                     setTimeout(__self.gunmanHit, time);
                 }
             }, 1000);
@@ -93,9 +104,11 @@
             if (__self.canFire) {
                 __self.domElems.bandito.removeEventListener('mousedown', __self.playerHit);
                 __self.canFire = false;
+                __self.sfxShot.play();
                 __self.enemyHit();
                 __self.domElems.status.textContent = 'Gunman won!';
-                setTimeout(__self.gameOver, 2000);
+                __self.sfxDeath.play();
+                setTimeout(__self.gameOver, 6000);
             }
         };
 
@@ -147,6 +160,7 @@
 
             if (__self.canFire) {
                 __self.canFire = false;
+                __self.sfxShot.play();
                 __self.enemyDown();
                 setTimeout(__self.enemyDead, 1500);
                 __self.domElems.status.textContent = 'You won!';
@@ -154,6 +168,10 @@
                 var prevLevel = __self.level - 1;
                 __self.domElems.coins.classList.remove('bag-coins_level' + prevLevel);
                 __self.domElems.coins.classList.add('bag-coins_level' + __self.level);
+
+                setTimeout(function() {
+                    __self.sfxWin.play();
+                }, 1000);
 
                 setTimeout(function () {
                     if (__self.level != 5) {
@@ -166,11 +184,17 @@
             } else {
                 __self.fault = true;
                 __self.domElems.bandito.removeEventListener('transitionend', __self.startFight);
+                __self.sfxIntro.pause();
+                __self.sfxIntro.currentTime = 0;
+                __self.sfxShot.play();
                 __self.domElems.bandito.classList.remove('enemy_move');
                 __self.clearAnimation();
                 __self.domElems.status.textContent = 'Fault!';
                 __self.domElems.status.classList.add('game_status-show');
-                setTimeout(__self.gameOver, 2000);
+                setTimeout(function() {
+                    __self.sfxFault.play();
+                }, 1000);
+                setTimeout(__self.gameOver, 4000);
             }
         };
 
